@@ -2,7 +2,9 @@
   "name": "update.electronjs.org",
   "scripts": {
     "start": "nodemon bin/update-server.js",
-    "test": "prettier-standard '**/*.js' && standard && cross-env NODE_ENV=test nyc tap test/*.js"
+    "test": "prettier-standard '**/*.js' && standard && cross-env NODE_ENV=test nyc tap test/*.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "dotenv-safe": "^8.2.0",
@@ -12,7 +14,8 @@
     "redis": "^2.8.0",
     "redlock": "^3.1.2",
     "request-ip": "^2.1.3",
-    "semver": "^7.3.2"
+    "semver": "^7.3.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
@@ -22,5 +25,6 @@
     "prettier-standard": "^16.4.1",
     "standard": "^16.0.3",
     "tap": "^14.11.0"
-  }
+  },
+  "snyk": true
 }
