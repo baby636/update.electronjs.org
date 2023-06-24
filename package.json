@@ -17,10 +17,10 @@
   "devDependencies": {
     "cross-env": "^7.0.2",
     "nock": "^13.0.5",
-    "nodemon": "^2.0.6",
+    "nodemon": "^2.0.17",
     "nyc": "^15.1.0",
     "prettier-standard": "^16.4.1",
     "standard": "^16.0.3",
-    "tap": "^14.11.0"
+    "tap": "^15.0.0"
   }
 }
